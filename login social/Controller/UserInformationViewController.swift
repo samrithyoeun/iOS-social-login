@@ -18,7 +18,6 @@ class UserInformationViewController: UIViewController {
         super.viewDidLoad()
         print("receving data : \(user)")
         informationLabel.text = "You logged in with: \nName: \(user.name)\nEmail: \(user.email)\nId: \(user.id) "
-
     }
     
 }

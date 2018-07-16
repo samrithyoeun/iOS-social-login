@@ -18,23 +18,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
-        
+        AuthenticationManager.shared.googleDelegate = self
+        GIDSignIn.sharedInstance().signOut()
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if (identifier == "facebookLogIn") {
-            return isComplete
-        }
-        return true
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let userInfoVC = segue.destination as? UserInformationViewController {
-            userInfoVC.user = self.user
-        }
-    }
-
     @IBAction func twitterButtonTapped(_ sender: Any) {
 //        TWTRTwitter.sharedInstance().logIn(completion: { (session, error) in
 //            if (session != nil) {
@@ -50,60 +37,43 @@ class LoginViewController: UIViewController {
         
         AuthenticationManager.shared.facebookLogin(from: self) { (result) in
             switch result {
+            case .success(let user):
+                self.loginWithUser(user)
+                
             case .failure(let error):
                 log(error)
                 
-            case .success(let result):
-                self.user = result
-                print("Data : \(self.user) ")
-                self.isComplete = true
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "facebookLogIn", sender: self)
-                }
             }
         }
     }
 
     @IBAction func googleButtonTapped(_ sender: Any) {
-        GIDSignIn.sharedInstance().signIn()
-        print("self is complete \(isComplete)")
-        DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "processLogIn", sender: self)
-        }
-    }
-    
-}
-
-extension LoginViewController: GIDSignInUIDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
-        if let error = error {
-            print("\(error.localizedDescription)")
-            NotificationCenter.default.post(
-                name: Notification.Name(rawValue: "ToggleAuthUINotification"), object: nil, userInfo: nil)
-        } else {
-            let userId = user.userID
-            _ = user.authentication.idToken
-            let fullName = user.profile.name
-            let email = user.profile.email
-            let picture = user.profile.imageURL(withDimension: 200)
-            self.user = UserEntity(id: userId ?? "" , name: fullName ?? "", email: email ?? "", picture: (picture?.absoluteString)!)
-            print(self.user)
-        }
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
-              withError error: Error!) {
         
-        NotificationCenter.default.post(
-            name: Notification.Name(rawValue: "ToggleAuthUINotification"),
-            object: nil,
-            userInfo: ["statusText": "User has disconnected."])
+        AuthenticationManager.shared.googleSignIn()
     }
-}
-
-extension LoginViewController: GIDSignInDelegate{
+    
+    private func loginWithUser(_ user: UserEntity) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let userInfoVC = storyBoard.instantiateViewController(withIdentifier: "userInfoViewController") as! UserInformationViewController
+        userInfoVC.user = user
+        self.present(userInfoVC, animated: true, completion: nil)
+    }
     
 }
 
+extension LoginViewController: GoogleSignInDelegate {
+    func googleSignInResponse(user: UserEntity) {
+        loginWithUser(user)
+    }
+    
+    func googleSignInLaunch(_ viewController: UIViewController) {
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func googleSignInDismiss(_ viewController: UIViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+}
 

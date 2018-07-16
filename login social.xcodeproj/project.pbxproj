@@ -22,6 +22,7 @@
 		537A0BDA20FC6EA600C9F308 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537A0BD920FC6EA600C9F308 /* credentials.plist */; };
 		537A0BDC20FC96CD00C9F308 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BDB20FC96CD00C9F308 /* Config.swift */; };
 		6762DE9A2DCB943535C46DC5 /* Pods_login_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEF4A47A025216484C14AB0 /* Pods_login_social.framework */; };
+		CDADE2B920FCE5C9005C0E88 /* GoogleSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDADE2B820FCE5C9005C0E88 /* GoogleSignInDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		537A0BD920FC6EA600C9F308 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		537A0BDB20FC96CD00C9F308 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		7EEF4A47A025216484C14AB0 /* Pods_login_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_login_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDADE2B820FCE5C9005C0E88 /* GoogleSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				537A0BD220FC5B2E00C9F308 /* UserEntity.swift */,
 				537A0BCA20FC4F7700C9F308 /* AuthenticationManager.swift */,
 				537A0BDB20FC96CD00C9F308 /* Config.swift */,
+				CDADE2B820FCE5C9005C0E88 /* GoogleSignInDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				537A0BDC20FC96CD00C9F308 /* Config.swift in Sources */,
 				537A0BCD20FC502400C9F308 /* Helper.swift in Sources */,
 				537A0BD320FC5B2E00C9F308 /* UserEntity.swift in Sources */,
+				CDADE2B920FCE5C9005C0E88 /* GoogleSignInDelegate.swift in Sources */,
 				537A0BB520FC317E00C9F308 /* LoginViewController.swift in Sources */,
 				537A0BB320FC317E00C9F308 /* AppDelegate.swift in Sources */,
 			);
