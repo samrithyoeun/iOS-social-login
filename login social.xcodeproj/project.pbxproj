@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		537A0BB320FC317E00C9F308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BB220FC317E00C9F308 /* AppDelegate.swift */; };
-		537A0BB520FC317E00C9F308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BB420FC317E00C9F308 /* ViewController.swift */; };
+		537A0BB520FC317E00C9F308 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BB420FC317E00C9F308 /* LoginViewController.swift */; };
 		537A0BB820FC317E00C9F308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537A0BB620FC317E00C9F308 /* Main.storyboard */; };
 		537A0BBB20FC317E00C9F308 /* login_social.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BB920FC317E00C9F308 /* login_social.xcdatamodeld */; };
 		537A0BBD20FC318400C9F308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537A0BBC20FC318400C9F308 /* Assets.xcassets */; };
 		537A0BC020FC318400C9F308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537A0BBE20FC318400C9F308 /* LaunchScreen.storyboard */; };
+		537A0BCB20FC4F7700C9F308 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BCA20FC4F7700C9F308 /* AuthenticationManager.swift */; };
+		537A0BCD20FC502400C9F308 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BCC20FC502400C9F308 /* Helper.swift */; };
+		537A0BD120FC528500C9F308 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BD020FC528500C9F308 /* Result.swift */; };
+		537A0BD320FC5B2E00C9F308 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BD220FC5B2E00C9F308 /* UserEntity.swift */; };
+		537A0BD520FC690800C9F308 /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BD420FC690800C9F308 /* UserInformationViewController.swift */; };
+		537A0BD720FC6A1C00C9F308 /* UIApplicationEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BD620FC6A1B00C9F308 /* UIApplicationEx.swift */; };
+		537A0BDA20FC6EA600C9F308 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537A0BD920FC6EA600C9F308 /* credentials.plist */; };
+		537A0BDC20FC96CD00C9F308 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BDB20FC96CD00C9F308 /* Config.swift */; };
 		6762DE9A2DCB943535C46DC5 /* Pods_login_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEF4A47A025216484C14AB0 /* Pods_login_social.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +29,20 @@
 		0BF073BFC5AD08F17A988F31 /* Pods-login social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-login social/Pods-login social.debug.xcconfig"; sourceTree = "<group>"; };
 		537A0BAF20FC317E00C9F308 /* login social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "login social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		537A0BB220FC317E00C9F308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		537A0BB420FC317E00C9F308 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		537A0BB420FC317E00C9F308 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		537A0BB720FC317E00C9F308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		537A0BBA20FC317E00C9F308 /* login_social.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = login_social.xcdatamodel; sourceTree = "<group>"; };
 		537A0BBC20FC318400C9F308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		537A0BBF20FC318400C9F308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		537A0BC120FC318400C9F308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		537A0BCA20FC4F7700C9F308 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		537A0BCC20FC502400C9F308 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		537A0BD020FC528500C9F308 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		537A0BD220FC5B2E00C9F308 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		537A0BD420FC690800C9F308 /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
+		537A0BD620FC6A1B00C9F308 /* UIApplicationEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationEx.swift; sourceTree = "<group>"; };
+		537A0BD920FC6EA600C9F308 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		537A0BDB20FC96CD00C9F308 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		7EEF4A47A025216484C14AB0 /* Pods_login_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_login_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,9 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				537A0BB220FC317E00C9F308 /* AppDelegate.swift */,
-				537A0BC720FC319500C9F308 /* Controller */,
+				537A0BCF20FC504100C9F308 /* Model */,
 				537A0BC820FC31A900C9F308 /* View */,
+				537A0BC720FC319500C9F308 /* Controller */,
 				537A0BC920FC31B800C9F308 /* SupportingFile */,
+				537A0BCE20FC503400C9F308 /* Common */,
 			);
 			path = "login social";
 			sourceTree = "<group>";
@@ -91,7 +109,8 @@
 		537A0BC720FC319500C9F308 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				537A0BB420FC317E00C9F308 /* ViewController.swift */,
+				537A0BB420FC317E00C9F308 /* LoginViewController.swift */,
+				537A0BD420FC690800C9F308 /* UserInformationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,12 +126,41 @@
 		537A0BC920FC31B800C9F308 /* SupportingFile */ = {
 			isa = PBXGroup;
 			children = (
+				537A0BD920FC6EA600C9F308 /* credentials.plist */,
 				537A0BBC20FC318400C9F308 /* Assets.xcassets */,
 				537A0BBE20FC318400C9F308 /* LaunchScreen.storyboard */,
 				537A0BC120FC318400C9F308 /* Info.plist */,
 				537A0BB920FC317E00C9F308 /* login_social.xcdatamodeld */,
 			);
 			path = SupportingFile;
+			sourceTree = "<group>";
+		};
+		537A0BCE20FC503400C9F308 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				537A0BD820FC6A2300C9F308 /* Extension */,
+				537A0BCC20FC502400C9F308 /* Helper.swift */,
+				537A0BD020FC528500C9F308 /* Result.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		537A0BCF20FC504100C9F308 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				537A0BD220FC5B2E00C9F308 /* UserEntity.swift */,
+				537A0BCA20FC4F7700C9F308 /* AuthenticationManager.swift */,
+				537A0BDB20FC96CD00C9F308 /* Config.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		537A0BD820FC6A2300C9F308 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				537A0BD620FC6A1B00C9F308 /* UIApplicationEx.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +175,7 @@
 				537A0BAC20FC317E00C9F308 /* Frameworks */,
 				537A0BAD20FC317E00C9F308 /* Resources */,
 				0BE8D8EB16239F42FE1A7843 /* [CP] Embed Pods Frameworks */,
+				F60504FACEF8A6ADA8ED552C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				537A0BC020FC318400C9F308 /* LaunchScreen.storyboard in Resources */,
+				537A0BDA20FC6EA600C9F308 /* credentials.plist in Resources */,
 				537A0BBD20FC318400C9F308 /* Assets.xcassets in Resources */,
 				537A0BB820FC317E00C9F308 /* Main.storyboard in Resources */,
 			);
@@ -194,12 +244,24 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -224,6 +286,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F60504FACEF8A6ADA8ED552C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-login social/Pods-login social-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-login social/Pods-login social-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -231,8 +315,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537A0BD720FC6A1C00C9F308 /* UIApplicationEx.swift in Sources */,
+				537A0BD120FC528500C9F308 /* Result.swift in Sources */,
 				537A0BBB20FC317E00C9F308 /* login_social.xcdatamodeld in Sources */,
-				537A0BB520FC317E00C9F308 /* ViewController.swift in Sources */,
+				537A0BD520FC690800C9F308 /* UserInformationViewController.swift in Sources */,
+				537A0BCB20FC4F7700C9F308 /* AuthenticationManager.swift in Sources */,
+				537A0BDC20FC96CD00C9F308 /* Config.swift in Sources */,
+				537A0BCD20FC502400C9F308 /* Helper.swift in Sources */,
+				537A0BD320FC5B2E00C9F308 /* UserEntity.swift in Sources */,
+				537A0BB520FC317E00C9F308 /* LoginViewController.swift in Sources */,
 				537A0BB320FC317E00C9F308 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

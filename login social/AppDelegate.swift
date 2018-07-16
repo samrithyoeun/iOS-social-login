@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreData
+import FBSDKLoginKit
+import GoogleSignIn
+import TwitterKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        GIDSignIn.sharedInstance().clientID = "960121798906-pgp8oqnqbups1qp85rvsupl4di75p0u0.apps.googleusercontent.com"
+        TWTRTwitter.sharedInstance().start(withConsumerKey: "BDgu3IvuXg5KSS2U5W4IxtPr0", consumerSecret: "V8zK1UfFouZVXzDYR2iYFFQKbeYecT5Itwi7a22tVr5tYXw97d")
         return true
     }
 
@@ -43,7 +50,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+        let gidSignIn = GIDSignIn.sharedInstance().handle(url as URL?,
+                                         sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                         annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        let twitterlogin = TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+        return true
+    }
+  
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -90,4 +106,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
 

@@ -4,4 +4,7 @@ target 'login social' do
   use_frameworks!
 
 	pod 'FBSDKLoginKit'
+    pod 'SwiftyJSON', '4.1.0'
+	pod 'GoogleSignIn'
+    pod 'TwitterKit'
 end
