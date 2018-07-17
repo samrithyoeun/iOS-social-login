@@ -16,7 +16,7 @@ class AuthenticationManager: NSObject {
     static let shared = AuthenticationManager()
     let fbLoginManager = FBSDKLoginManager()
     var googleDelegate: GoogleSignInDelegate?
-    
+    var onGoogleLoginSuccess: (()->Void)?
     override init() {
         super.init()
         GIDSignIn.sharedInstance().delegate = self
@@ -82,6 +82,7 @@ extension AuthenticationManager: GIDSignInDelegate {
             let picture = user.profile.imageURL(withDimension: 200)
             let user = UserEntity(id: userId ?? "" , name: fullName ?? "", email: email ?? "", picture: (picture?.absoluteString)!)
             googleDelegate?.googleSignInResponse(user: user)
+            onGoogleLoginSuccess?()
         }
         
     }

@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        GIDSignIn.sharedInstance().clientID = "960121798906-pgp8oqnqbups1qp85rvsupl4di75p0u0.apps.googleusercontent.com"
+        //FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        //GIDSignIn.sharedInstance().clientID = "960121798906-pgp8oqnqbups1qp85rvsupl4di75p0u0.apps.googleusercontent.com"
         TWTRTwitter.sharedInstance().start(withConsumerKey: "DAPk0M1mLBO3OALmhbGHQTDtR", consumerSecret: "NugLAUQLCfGHLLgFbEAtUNvXQUaczIs1MmiGGRFjtDnGFgpk2Z")
         return true
     }
@@ -51,10 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        _ = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
-        _ = GIDSignIn.sharedInstance().handle(url as URL?,
-                                         sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-                                         annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+       // _ = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+       // _ = GIDSignIn.sharedInstance().handle(url as URL?,
+                                    //     sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                   //      annotation: options[UIApplicationOpenURLOptionsKey.annotation])
         
         return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
     }

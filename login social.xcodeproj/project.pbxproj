@@ -24,6 +24,8 @@
 		537A0BDC20FC96CD00C9F308 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BDB20FC96CD00C9F308 /* Config.swift */; };
 		6762DE9A2DCB943535C46DC5 /* Pods_login_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EEF4A47A025216484C14AB0 /* Pods_login_social.framework */; };
 		CDADE2B920FCE5C9005C0E88 /* GoogleSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDADE2B820FCE5C9005C0E88 /* GoogleSignInDelegate.swift */; };
+		CDF9DDF120FDD5E800EDD552 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF9DDF020FDD5E800EDD552 /* SafariServices.framework */; };
+		CDF9DDF320FDE81E00EDD552 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9DDF220FDE81E00EDD552 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		537A0BDB20FC96CD00C9F308 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		7EEF4A47A025216484C14AB0 /* Pods_login_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_login_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDADE2B820FCE5C9005C0E88 /* GoogleSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInDelegate.swift; sourceTree = "<group>"; };
+		CDF9DDF020FDD5E800EDD552 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		CDF9DDF220FDE81E00EDD552 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF9DDF120FDD5E800EDD552 /* SafariServices.framework in Frameworks */,
 				6762DE9A2DCB943535C46DC5 /* Pods_login_social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +79,7 @@
 		43FEAD7E7B945902B8AF7EA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDF9DDF020FDD5E800EDD552 /* SafariServices.framework */,
 				7EEF4A47A025216484C14AB0 /* Pods_login_social.framework */,
 			);
 			name = Frameworks;
@@ -132,6 +138,7 @@
 			children = (
 				537A0BB420FC317E00C9F308 /* LoginViewController.swift */,
 				537A0BD420FC690800C9F308 /* UserInformationViewController.swift */,
+				CDF9DDF220FDE81E00EDD552 /* SignInViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,6 +379,7 @@
 				537A0BCD20FC502400C9F308 /* Helper.swift in Sources */,
 				537A0BD320FC5B2E00C9F308 /* UserEntity.swift in Sources */,
 				CDADE2B920FCE5C9005C0E88 /* GoogleSignInDelegate.swift in Sources */,
+				CDF9DDF320FDE81E00EDD552 /* SignInViewController.swift in Sources */,
 				537A0BB520FC317E00C9F308 /* LoginViewController.swift in Sources */,
 				537A0BB320FC317E00C9F308 /* AppDelegate.swift in Sources */,
 				5354029B20FDB94400CE52E1 /* AccountType.swift in Sources */,

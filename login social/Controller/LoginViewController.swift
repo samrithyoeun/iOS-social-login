@@ -25,14 +25,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func twitterButtonTapped(_ sender: Any) {
-        print("twitter button did tapped")
-        TWTRTwitter.sharedInstance().logIn(completion: { (session, error) in
-            if (session != nil) {
-                print("signed in as \(session?.userName)");
-            } else {
-                print("error: \(error?.localizedDescription)");
-            }
-        })
+        print("github button did tapped")
+        
     }
     
     @IBAction func facebookButtonTapped(_ sender: Any) {
@@ -52,6 +46,13 @@ class LoginViewController: UIViewController {
     @IBAction func googleButtonTapped(_ sender: Any) {
         
         AuthenticationManager.shared.googleSignIn()
+        AuthenticationManager.shared.onGoogleLoginSuccess = { () in
+            
+        }
+    }
+    
+    @IBAction func githubButtonTapped(_ sender: Any) {
+        print("github button tapped")
     }
     
     private func loginWithUser(_ user: UserEntity) {
@@ -61,7 +62,6 @@ class LoginViewController: UIViewController {
         self.present(userInfoVC, animated: true, completion: nil)
     }
     
-   
 }
 
 extension LoginViewController: GoogleSignInDelegate {
