@@ -7,4 +7,6 @@ target 'login social' do
     pod 'SwiftyJSON', '4.1.0'
 	pod 'GoogleSignIn'
     pod 'TwitterKit'
+    pod 'FirebaseUI'
+    pod 'FirebaseUI/Twitter'
 end

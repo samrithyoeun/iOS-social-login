@@ -11,6 +11,7 @@ import FBSDKLoginKit
 import GoogleSignIn
 import TwitterKit
 
+
 class LoginViewController: UIViewController {
     
     var user = UserEntity()
@@ -20,17 +21,18 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         AuthenticationManager.shared.googleDelegate = self
         GIDSignIn.sharedInstance().signOut()
+        
     }
     
     @IBAction func twitterButtonTapped(_ sender: Any) {
-//        TWTRTwitter.sharedInstance().logIn(completion: { (session, error) in
-//            if (session != nil) {
-//                print("signed in as \(String(describing: session?.userName))");
-//            } else {
-//                print("error: \(String(describing: error?.localizedDescription))");
-//            }
-//        })
-        GIDSignIn.sharedInstance().signOut()
+        print("twitter button did tapped")
+        TWTRTwitter.sharedInstance().logIn(completion: { (session, error) in
+            if (session != nil) {
+                print("signed in as \(session?.userName)");
+            } else {
+                print("error: \(error?.localizedDescription)");
+            }
+        })
     }
     
     @IBAction func facebookButtonTapped(_ sender: Any) {
@@ -59,6 +61,7 @@ class LoginViewController: UIViewController {
         self.present(userInfoVC, animated: true, completion: nil)
     }
     
+   
 }
 
 extension LoginViewController: GoogleSignInDelegate {
@@ -73,7 +76,6 @@ extension LoginViewController: GoogleSignInDelegate {
     func googleSignInDismiss(_ viewController: UIViewController) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     
 }
 

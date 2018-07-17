@@ -13,6 +13,7 @@ class UserInformationViewController: UIViewController {
     @IBOutlet weak var informationLabel: UILabel!
     
     var user = UserEntity()
+    var accountType = AccountType.google
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,4 +21,14 @@ class UserInformationViewController: UIViewController {
         informationLabel.text = "You logged in with: \nName: \(user.name)\nEmail: \(user.email)\nId: \(user.id) "
     }
     
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        switch accountType {
+        case .facebook:
+            AuthenticationManager.shared.facebookLogOut()
+        case .google:
+            AuthenticationManager.shared.googleSignOut()
+        default:
+            print("will implement later")
+        }
+    }
 }

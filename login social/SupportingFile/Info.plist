@@ -22,7 +22,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb224352044878209</string>
-				<string>twitterkit-BDgu3IvuXg5KSS2U5W4IxtPr0</string>
+				<string>twitterkit-DAPk0M1mLBO3OALmhbGHQTDtR</string>
 			</array>
 		</dict>
 		<dict>
@@ -31,6 +31,14 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.960121798906-pgp8oqnqbups1qp85rvsupl4di75p0u0</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>twitterkit-DAPk0M1mLBO3OALmhbGHQTDtR</string>
 			</array>
 		</dict>
 	</array>

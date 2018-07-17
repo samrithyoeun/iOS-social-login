@@ -142,6 +142,7 @@
                                                 <state key="normal" title=" "/>
                                                 <connections>
                                                     <action selector="twitterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U19-ea-ahg"/>
+                                                    <segue destination="Aka-Vo-APs" kind="presentation" id="cVF-28-B6M"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="7JQ-Um-FMu">
@@ -198,6 +199,21 @@
             </objects>
             <point key="canvasLocation" x="116.25" y="117.25352112676056"/>
         </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="gCB-1g-AIO">
+            <objects>
+                <viewController id="Aka-Vo-APs" customClass="SignInViewController" customModule="login_social" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YNc-mT-crZ" customClass="UIWebView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gKc-wY-Kfm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1q6-VP-D8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="117"/>
+        </scene>
         <!--User Information View Controller-->
         <scene sceneID="lTS-RS-1qa">
             <objects>
@@ -221,11 +237,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To9-iC-Bky">
+                                <rect key="frame" x="30" y="310.5" width="260" height="30"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.1960784314" blue="0.41176470590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="LOG OUT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButtonTapped:" destination="nLh-7w-72S" eventType="touchUpInside" id="BzK-SS-wks"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="hZK-tJ-8ae"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ydc-1C-jkg" firstAttribute="centerX" secondItem="LCd-vD-nbt" secondAttribute="centerX" id="264-Jq-7rQ"/>
                             <constraint firstItem="ydc-1C-jkg" firstAttribute="top" secondItem="ZXN-8k-YLU" secondAttribute="top" constant="80" id="LP3-zy-cmT"/>
+                            <constraint firstItem="To9-iC-Bky" firstAttribute="leading" secondItem="ZXN-8k-YLU" secondAttribute="leading" constant="30" id="aD8-tU-jAc"/>
+                            <constraint firstItem="ZXN-8k-YLU" firstAttribute="trailing" secondItem="To9-iC-Bky" secondAttribute="trailing" constant="30" id="cxu-eS-qL9"/>
+                            <constraint firstItem="To9-iC-Bky" firstAttribute="top" secondItem="wjO-2n-G9g" secondAttribute="bottom" constant="50" id="gsn-MU-AIW"/>
                             <constraint firstItem="wjO-2n-G9g" firstAttribute="leading" secondItem="ZXN-8k-YLU" secondAttribute="leading" constant="30" id="kWg-zQ-67F"/>
                             <constraint firstItem="wjO-2n-G9g" firstAttribute="top" secondItem="ydc-1C-jkg" secondAttribute="bottom" constant="20" id="mbU-Ow-0aN"/>
                             <constraint firstItem="ZXN-8k-YLU" firstAttribute="trailing" secondItem="wjO-2n-G9g" secondAttribute="trailing" constant="30" id="yc6-cr-56z"/>
@@ -238,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4P-eu-ksV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811.875" y="116.19718309859155"/>
+            <point key="canvasLocation" x="1588" y="116"/>
         </scene>
     </scenes>
     <resources>

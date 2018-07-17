@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5337EBB920FD9F5D003E6ACB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5337EBB820FD9F5D003E6ACB /* GoogleService-Info.plist */; };
+		5354029B20FDB94400CE52E1 /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5354029A20FDB94400CE52E1 /* AccountType.swift */; };
 		537A0BB320FC317E00C9F308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BB220FC317E00C9F308 /* AppDelegate.swift */; };
 		537A0BB520FC317E00C9F308 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BB420FC317E00C9F308 /* LoginViewController.swift */; };
 		537A0BB820FC317E00C9F308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537A0BB620FC317E00C9F308 /* Main.storyboard */; };
-		537A0BBB20FC317E00C9F308 /* login_social.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BB920FC317E00C9F308 /* login_social.xcdatamodeld */; };
 		537A0BBD20FC318400C9F308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537A0BBC20FC318400C9F308 /* Assets.xcassets */; };
 		537A0BC020FC318400C9F308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537A0BBE20FC318400C9F308 /* LaunchScreen.storyboard */; };
 		537A0BCB20FC4F7700C9F308 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537A0BCA20FC4F7700C9F308 /* AuthenticationManager.swift */; };
@@ -28,11 +29,12 @@
 /* Begin PBXFileReference section */
 		0670A913B12FBC9F3F449B4E /* Pods-login social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login social.release.xcconfig"; path = "Pods/Target Support Files/Pods-login social/Pods-login social.release.xcconfig"; sourceTree = "<group>"; };
 		0BF073BFC5AD08F17A988F31 /* Pods-login social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-login social/Pods-login social.debug.xcconfig"; sourceTree = "<group>"; };
+		5337EBB820FD9F5D003E6ACB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5354029A20FDB94400CE52E1 /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		537A0BAF20FC317E00C9F308 /* login social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "login social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		537A0BB220FC317E00C9F308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		537A0BB420FC317E00C9F308 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		537A0BB720FC317E00C9F308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		537A0BBA20FC317E00C9F308 /* login_social.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = login_social.xcdatamodel; sourceTree = "<group>"; };
 		537A0BBC20FC318400C9F308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		537A0BBF20FC318400C9F308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		537A0BC120FC318400C9F308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,23 @@
 				7EEF4A47A025216484C14AB0 /* Pods_login_social.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5337EBB220FD7F53003E6ACB /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				537A0BCA20FC4F7700C9F308 /* AuthenticationManager.swift */,
+				CDADE2B820FCE5C9005C0E88 /* GoogleSignInDelegate.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		5337EBB320FD7F6E003E6ACB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				537A0BD220FC5B2E00C9F308 /* UserEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		537A0BA620FC317E00C9F308 = {
@@ -129,10 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				537A0BD920FC6EA600C9F308 /* credentials.plist */,
+				5337EBB820FD9F5D003E6ACB /* GoogleService-Info.plist */,
 				537A0BBC20FC318400C9F308 /* Assets.xcassets */,
 				537A0BBE20FC318400C9F308 /* LaunchScreen.storyboard */,
 				537A0BC120FC318400C9F308 /* Info.plist */,
-				537A0BB920FC317E00C9F308 /* login_social.xcdatamodeld */,
 			);
 			path = SupportingFile;
 			sourceTree = "<group>";
@@ -150,10 +169,10 @@
 		537A0BCF20FC504100C9F308 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				537A0BD220FC5B2E00C9F308 /* UserEntity.swift */,
-				537A0BCA20FC4F7700C9F308 /* AuthenticationManager.swift */,
+				5337EBB320FD7F6E003E6ACB /* Entity */,
+				5337EBB220FD7F53003E6ACB /* Authentication */,
 				537A0BDB20FC96CD00C9F308 /* Config.swift */,
-				CDADE2B820FCE5C9005C0E88 /* GoogleSignInDelegate.swift */,
+				5354029A20FDB94400CE52E1 /* AccountType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +248,7 @@
 			files = (
 				537A0BC020FC318400C9F308 /* LaunchScreen.storyboard in Resources */,
 				537A0BDA20FC6EA600C9F308 /* credentials.plist in Resources */,
+				5337EBB920FD9F5D003E6ACB /* GoogleService-Info.plist in Resources */,
 				537A0BBD20FC318400C9F308 /* Assets.xcassets in Resources */,
 				537A0BB820FC317E00C9F308 /* Main.storyboard in Resources */,
 			);
@@ -245,26 +265,44 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-login social/Pods-login social-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -296,15 +334,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-login social/Pods-login social-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
-				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -320,7 +366,6 @@
 			files = (
 				537A0BD720FC6A1C00C9F308 /* UIApplicationEx.swift in Sources */,
 				537A0BD120FC528500C9F308 /* Result.swift in Sources */,
-				537A0BBB20FC317E00C9F308 /* login_social.xcdatamodeld in Sources */,
 				537A0BD520FC690800C9F308 /* UserInformationViewController.swift in Sources */,
 				537A0BCB20FC4F7700C9F308 /* AuthenticationManager.swift in Sources */,
 				537A0BDC20FC96CD00C9F308 /* Config.swift in Sources */,
@@ -329,6 +374,7 @@
 				CDADE2B920FCE5C9005C0E88 /* GoogleSignInDelegate.swift in Sources */,
 				537A0BB520FC317E00C9F308 /* LoginViewController.swift in Sources */,
 				537A0BB320FC317E00C9F308 /* AppDelegate.swift in Sources */,
+				5354029B20FDB94400CE52E1 /* AccountType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LCN239U73A;
 				INFOPLIST_FILE = "login social/SupportingFIle/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,6 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LCN239U73A;
 				INFOPLIST_FILE = "login social/SupportingFIle/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,19 +576,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		537A0BB920FC317E00C9F308 /* login_social.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				537A0BBA20FC317E00C9F308 /* login_social.xcdatamodel */,
-			);
-			currentVersion = 537A0BBA20FC317E00C9F308 /* login_social.xcdatamodel */;
-			path = login_social.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 537A0BA720FC317E00C9F308 /* Project object */;
 }

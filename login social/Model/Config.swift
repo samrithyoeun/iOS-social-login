@@ -17,3 +17,8 @@ struct Instagram {
     static let accessToken = "access_Token"
     static let scope = "likes-comments-relationships"
 }
+
+struct GitHub {
+    static let clientId = "809d0206b4c7616d363a"
+    static let clientSecret = "904ba5c0e0a2721f0546ae2e54fc730b9cdf4011"
+}
